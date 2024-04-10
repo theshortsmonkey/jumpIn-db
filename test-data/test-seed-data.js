@@ -12,6 +12,8 @@ export const testUserData = [
       make: "testMAke1",
       colour: "testColour1",
       tax_due_date: "2025-01-01",
+      fuelType: 'PETROL',
+      co2Emissions: 222
     },
     identity_verification_status: false,
     driver_verification_status: true,
@@ -30,6 +32,8 @@ export const testUserData = [
       make: "testMAke2",
       colour: "testColour2",
       tax_due_date: "2025-01-02",
+      fuelType: 'DIESEL',
+      co2Emissions: 120
     },
     identity_verification_status: true,
     driver_verification_status: false,
@@ -48,6 +52,8 @@ export const testUserData = [
       make: "testMAke3",
       colour: "testColour3",
       tax_due_date: "2025-01-03",
+      fuelType: 'PETROL',
+      co2Emissions: 300
     },
     identity_verification_status: true,
     driver_verification_status: true,
@@ -61,12 +67,7 @@ export const testUserData = [
     password: "testPassword4",
     phoneNumber: "0123456789",
     bio: "testBio testBio4",
-    car: {
-      reg: "AB23 AAD",
-      make: "testMAke4",
-      colour: "testColour4",
-      tax_due_date: "2025-01-04",
-    },
+    car: null,
     identity_verification_status: false,
     driver_verification_status: false,
     licence_expiry_date: "2027-01-04",

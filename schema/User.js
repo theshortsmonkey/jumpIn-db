@@ -23,6 +23,8 @@ const userSchema = new Schema({
         make: {type: String, default: ''},
         colour: {type: String, default: ''},
         tax_due_date: {type: String, default: ''},
+        fuelType: {type: String, default: ''},
+        co2Emissions: {type: Number, default: 0}
     },
     identity_verification_status: {type: Boolean, default: false},
     driver_verification_status: {type: Boolean, default: false},
