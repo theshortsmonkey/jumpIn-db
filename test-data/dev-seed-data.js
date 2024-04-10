@@ -12,6 +12,8 @@ export const devUserData = [
       make: "Make1",
       colour: "Colour1",
       tax_due_date: "2025-01-01",
+      fuelType: 'PETROL',
+      co2Emissions: 300
     },
     identity_verification_status: false,
     driver_verification_status: true,
@@ -31,6 +33,8 @@ export const devUserData = [
       make: "Make3",
       colour: "Colour3",
       tax_due_date: "2025-01-03",
+      fuelType: 'DIESEL',
+      co2Emissions: 150
     },
     identity_verification_status: true,
     driver_verification_status: true,
