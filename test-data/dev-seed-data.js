@@ -127,6 +127,7 @@ export const devRideData = [
     driver_rating: 2,
     rider_rating: 5,
     date_and_time: Date.now(),
+    chats: []
   },
   {
     to: "Manchester",
@@ -167,6 +168,7 @@ export const devRideData = [
     driver_rating: 4,
     rider_rating: 4,
     date_and_time: Date.now(),
+    chats: []
   },
   {
     to: "Manchester",
@@ -207,6 +209,7 @@ export const devRideData = [
     driver_rating: 5,
     rider_rating: 4,
     date_and_time: Date.now(),
+    chats: []
   },
   {
     to: "Manchester",
@@ -247,6 +250,7 @@ export const devRideData = [
     driver_rating: 3,
     rider_rating: 4,
     date_and_time: Date.now(),
+    chats: []
   }   
 ]
 

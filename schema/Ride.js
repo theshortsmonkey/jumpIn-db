@@ -1,12 +1,14 @@
 import {Schema, model} from 'mongoose';
 
 const message = new Schema({
-    username: String,
+    from: String,
     text: String,
     timeStamp: {type: Date, default: Date.now},
 })
 
 const chat = new Schema({ 
+    rider: String,
+    driver: String,
     messages: [message],
 })
 

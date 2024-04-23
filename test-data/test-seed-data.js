@@ -1,6 +1,6 @@
 export const testUserData = [
   {
-    username: "testUSername1",
+    username: "testUsername1",
     firstName: "testFirstName1",
     lastName: "testLastName1",
     email: "testEmail1",
@@ -20,7 +20,7 @@ export const testUserData = [
     licence_expiry_date: "2027-01-01",
   },
   {
-    username: "testUSername2",
+    username: "testUsername2",
     firstName: "testFirstName2",
     lastName: "testLastName2",
     email: "testEmail2",
@@ -40,7 +40,7 @@ export const testUserData = [
     licence_expiry_date: "2027-01-02",
   },
   {
-    username: "testUSername3",
+    username: "testUsername3",
     firstName: "testFirstName3",
     lastName: "testLastName3",
     email: "testEmail3",
@@ -60,7 +60,7 @@ export const testUserData = [
     licence_expiry_date: "2027-01-03",
   },
   {
-    username: "testUSername4",
+    username: "testUsername4",
     firstName: "testFirstName4",
     lastName: "testLastName4",
     email: "testEmail4",
@@ -114,6 +114,7 @@ export const testRideData = [
     driver_rating: 2,
     rider_rating: 5,
     date_and_time: Date.now(),
+    chats: []
   },
   {
     to: "Manchester",
@@ -154,6 +155,7 @@ export const testRideData = [
     driver_rating: 4,
     rider_rating: 4,
     date_and_time: Date.now(),
+    chats: []
   },
   {
     to: "Manchester",
@@ -194,6 +196,7 @@ export const testRideData = [
     driver_rating: 5,
     rider_rating: 4,
     date_and_time: Date.now(),
+    chats: []
   },
   {
     to: "Manchester",
@@ -234,7 +237,8 @@ export const testRideData = [
     driver_rating: 3,
     rider_rating: 4,
     date_and_time: Date.now(),
+    chats: []
   }   
 ]
 
-export const testFileNamesArr = [{name:'profile-pic-1.png',username: 'testUSername1'}, {name:'profile-pic-2.png',username: 'testUSername2'}, {name:'profile-pic-3.png',username: 'testUSername3'}, {name:'profile-pic-4.jpeg',username: 'testUSername4'}];
+export const testFileNamesArr = [{name:'profile-pic-1.png',username: 'testUsername1'}, {name:'profile-pic-2.png',username: 'testUsername2'}, {name:'profile-pic-3.png',username: 'testUsername3'}, {name:'profile-pic-4.jpeg',username: 'testUsername4'}];
