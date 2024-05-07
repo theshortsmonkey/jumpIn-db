@@ -81,9 +81,13 @@ export const testRideData = [
     to_region: "Manchester",
     from_region: "Leeds",
     driver_username: "testUsername1",
-    rider_usernames: ["testUsername2",],
-    jumpin_request: [],
-    available_seats: 1,
+    rider_usernames: [
+      "testUsername3"
+    ],
+    jumpin_requests: [
+      "testUsername4"
+    ],
+    "available_seats": 2,
     carbon_emissions: 122,
     distance: 330,
     price: 1000,
@@ -115,7 +119,41 @@ export const testRideData = [
     driver_rating: 2,
     rider_rating: 5,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+      {
+        "rider": "testUsername4",
+        "driver": "testUsername1",
+        "messages": [
+          {
+            "from": "testUsername4",
+            "text": "testUsername4 would like to jumpIn",
+            "timeStamp": "2024-05-06T12:51:00.152Z"
+          },
+        ]
+      },
+      {
+        "rider": "testUsername2",
+        "driver": "testUsername1",
+        "messages": [
+          {
+            "from": "testUsername1",
+            "text": "Request from testUsername2 rejected",
+            "timeStamp": "2024-05-06T13:36:33.240Z"
+          }
+        ]
+      },
+      {
+        "rider": "testUsername3",
+        "driver": "testUsername1",
+        "messages": [
+          {
+            "from": "testUsername1",
+            "text": "Request from testUsername3 accepted",
+            "timeStamp": "2024-05-06T13:37:10.395Z"
+          }
+        ]
+      }
+    ]
   },
   {
     to: "Manchester",
@@ -123,7 +161,7 @@ export const testRideData = [
     to_region: "Manchester",
     from_region: "Birmingham",
     driver_username: "testUsername2",
-    rider_usernames: ["testUsername3",],
+    rider_usernames: [],
     jumpin_request: [],
     available_seats: 1,
     carbon_emissions: 250,
@@ -157,7 +195,19 @@ export const testRideData = [
     driver_rating: 4,
     rider_rating: 4,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+    {
+      "rider": "testUsername4",
+      "driver": "testUsername2",
+      "messages": [
+        {
+          "from": "testUsername4",
+          "text": "testUsername4 would like to jumpIn",
+          "timeStamp": "2024-05-06T12:51:00.152Z"
+        },
+      ]
+    },
+  ],
   },
   {
     to: "Manchester",
@@ -166,8 +216,8 @@ export const testRideData = [
     from_region: "London",
     driver_username: "testUsername3",
     rider_usernames: ["testUsername4",],
-    jumpin_request: [],
-    available_seats: 1,
+    jumpin_request: ["testUsername1","testUsername2",],
+    available_seats: 3,
     carbon_emissions: 360,
     distance: 400,
     price: 4000,
@@ -199,7 +249,41 @@ export const testRideData = [
     driver_rating: 5,
     rider_rating: 4,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+      {
+        "rider": "testUsername4",
+        "driver": "testUsername3",
+        "messages": [
+          {
+            "from": "testUsername3",
+            "text": "Request from testUsername4 accepted",
+            "timeStamp": "2024-05-06T13:37:10.395Z"
+          }
+        ]
+      },
+      {
+        "rider": "testUsername1",
+        "driver": "testUsername3",
+        "messages": [
+          {
+            "from": "testUsername1",
+            "text": "testUsername1 would like to jumpIn",
+            "timeStamp": "2024-05-06T12:51:00.152Z"
+          },
+        ]
+      },
+      {
+        "rider": "testUsername2",
+        "driver": "testUsername3",
+        "messages": [
+          {
+            "from": "testUsername2",
+            "text": "testUsername2 would like to jumpIn",
+            "timeStamp": "2024-05-06T12:51:00.152Z"
+          },
+        ]
+      },
+    ]
   },
   {
     to: "Manchester",
@@ -241,7 +325,19 @@ export const testRideData = [
     driver_rating: 3,
     rider_rating: 4,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+      {
+        "rider": "testUsername1",
+        "driver": "testUsername4",
+        "messages": [
+          {
+            "from": "testUsername4",
+            "text": "Request from testUsername1 accepted",
+            "timeStamp": "2024-05-06T13:37:10.395Z"
+          }
+        ]
+      }
+    ]
   }   
 ]
 
