@@ -3,8 +3,19 @@ import mongodb from 'mongodb'
 import fs from 'fs'
 import { User } from './schema/User.js'
 import { Ride } from './schema/Ride.js'
-import { testUserData, testRideData, testFileNamesArr } from './test-data/test-seed-data.js'
+import {
+  testUserData,
+  testRideData,
+  testFileNamesArr,
+} from './test-data/test-seed-data.js'
 
+import bcrypt from 'bcrypt'
+const saltRounds = 10
+testUserData.forEach((user,i) => {
+  bcrypt.hash(user.password, saltRounds).then((hash) => {
+    testUserData[i].password = hash
+  })
+})
 const client = new mongodb.MongoClient('mongodb://localhost:27017')
 mongoose.connect('mongodb://localhost:27017/testJumpInDb')
 const connection = mongoose.connection
@@ -13,14 +24,17 @@ connection
   .dropDatabase()
   .then(() => {
     const db = client.db('testJumpInDb')
-    const bucket = new mongodb.GridFSBucket(db, {bucketName: 'images'})
-    const __dirname = import.meta.dirname;
+    const bucket = new mongodb.GridFSBucket(db, { bucketName: 'images' })
+    const __dirname = import.meta.dirname
     testFileNamesArr.forEach((file) => {
-        const streamWrite = bucket.openUploadStream(file.name,{metadata: { username: file.username}})
-        fs.createReadStream(`${__dirname}/test-data/${file.name}`).pipe(streamWrite)
+      const streamWrite = bucket.openUploadStream(file.name, {
+        metadata: { username: file.username },
+      })
+      fs.createReadStream(`${__dirname}/test-data/${file.name}`).pipe(
+        streamWrite
+      )
     })
-    
-})
+  })
   .then(() => {
     return User.init()
   })
@@ -32,12 +46,13 @@ connection
   })
   .then(() => {
     return User.countDocuments({})
-  }).then((res) => {
-    console.log(res,'- created users')
+  })
+  .then((res) => {
+    console.log(res, '- created users')
     return Ride.countDocuments({})
-  }).then((res) => {
+  })
+  .then((res) => {
     console.log(res, '- created rides')
     console.log('Test Data Seeded')
     process.exit(0)
-    
   })

@@ -1,10 +1,11 @@
+
 export const testUserData = [
   {
     username: "testUsername1",
     firstName: "testFirstName1",
     lastName: "testLastName1",
     email: "testEmail1",
-    password: "testPassword1",
+    password: 'testPassword1',
     phoneNumber: "0123456789",
     bio: "testBio testBio1",
     car: {
