@@ -19,6 +19,7 @@ export const testUserData = [
     identity_verification_status: false,
     driver_verification_status: true,
     licence_expiry_date: "2027-01-01",
+    reports: []
   },
   {
     username: "testUsername2",
@@ -39,6 +40,7 @@ export const testUserData = [
     identity_verification_status: true,
     driver_verification_status: false,
     licence_expiry_date: "2027-01-02",
+    reports: []
   },
   {
     username: "testUsername3",
@@ -59,6 +61,7 @@ export const testUserData = [
     identity_verification_status: true,
     driver_verification_status: true,
     licence_expiry_date: "2027-01-03",
+    reports: []
   },
   {
     username: "testUsername4",
@@ -68,10 +71,11 @@ export const testUserData = [
     password: "testPassword4",
     phoneNumber: "0123456789",
     bio: "testBio testBio4",
-    car: null,
+    car: [],
     identity_verification_status: false,
     driver_verification_status: false,
     licence_expiry_date: "2027-01-04",
+    reports: []
   }
 ]
 
