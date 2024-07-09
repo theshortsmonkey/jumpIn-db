@@ -83,8 +83,8 @@ export const testRideData = [
   {
     to: "Manchester",
     from: "Leeds",
-    to_region: "Manchester",
-    from_region: "Leeds",
+    to_region: "North West",
+    from_region: "Yorkshire",
     driver_username: "testUsername1",
     rider_usernames: [
       "testUsername3"
@@ -163,8 +163,8 @@ export const testRideData = [
   {
     to: "Manchester",
     from: "Birmingham",
-    to_region: "Manchester",
-    from_region: "Birmingham",
+    to_region: "North West",
+    from_region: "Midlands",
     driver_username: "testUsername2",
     rider_usernames: [],
     jumpin_request: [],
@@ -217,8 +217,8 @@ export const testRideData = [
   {
     to: "Manchester",
     from: "London",
-    to_region: "Manchester",
-    from_region: "London",
+    to_region: "North West",
+    from_region: "South",
     driver_username: "testUsername3",
     rider_usernames: ["testUsername4",],
     jumpin_request: ["testUsername1","testUsername2",],
@@ -293,8 +293,8 @@ export const testRideData = [
   {
     to: "Manchester",
     from: "Edinburgh",
-    to_region: "Manchester",
-    from_region: "Edinburgh",
+    to_region: "North West",
+    from_region: "Scotland",
     driver_username: "testUsername4",
     rider_usernames: ["testUsername1",],
     jumpin_request: [],
