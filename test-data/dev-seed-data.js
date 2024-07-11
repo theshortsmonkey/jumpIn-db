@@ -18,7 +18,7 @@ export const devUserData = [
     identity_verification_status: false,
     driver_verification_status: true,
     licence_expiry_date: "",
-    reports: null
+    reports: []
   },
   {
     username: "user2",
@@ -57,11 +57,11 @@ export const devUserData = [
     password: "User345!",
     phoneNumber: "0123456789",
     bio: "I am User3",
-    car: null,
+    car: [],
     identity_verification_status: true,
     driver_verification_status: false,
     licence_expiry_date: "2027-01-03",
-    reports: null
+    reports: []
   },
   {
     username: "user4",
@@ -71,7 +71,7 @@ export const devUserData = [
     password: "User456!",
     phoneNumber: "0123456789",
     bio: "I am User4",
-    car: null,
+    car: [],
     identity_verification_status: false,
     driver_verification_status: false,
     licence_expiry_date: "",
@@ -91,11 +91,16 @@ export const devRideData = [
   {
     to: "Manchester",
     from: "Leeds",
-    to_region: "Manchester",
-    from_region: "Leeds",
+    to_region: "North West",
+    from_region: "Yorkshire",
     driver_username: "user1",
-    rider_usernames: ["user2",],
-    available_Seats: 1,
+    rider_usernames: [
+      "user3"
+    ],
+    jumpin_requests: [
+      "user4"
+    ],
+    "available_seats": 2,
     carbon_emissions: 122,
     distance: 330,
     price: 1000,
@@ -127,16 +132,51 @@ export const devRideData = [
     driver_rating: 2,
     rider_rating: 5,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+      {
+        "rider": "user4",
+        "driver": "user1",
+        "messages": [
+          {
+            "from": "user4",
+            "text": "user4 would like to jumpIn",
+            "timeStamp": "2024-05-06T12:51:00.152Z"
+          },
+        ]
+      },
+      {
+        "rider": "user2",
+        "driver": "user1",
+        "messages": [
+          {
+            "from": "user1",
+            "text": "Request from user2 rejected",
+            "timeStamp": "2024-05-06T13:36:33.240Z"
+          }
+        ]
+      },
+      {
+        "rider": "user3",
+        "driver": "user1",
+        "messages": [
+          {
+            "from": "user1",
+            "text": "Request from user3 accepted",
+            "timeStamp": "2024-05-06T13:37:10.395Z"
+          }
+        ]
+      }
+    ]
   },
   {
     to: "Manchester",
     from: "Birmingham",
-    to_region: "Manchester",
-    from_region: "Birmingham",
+    to_region: "North West",
+    from_region: "Midlands",
     driver_username: "user2",
-    rider_usernames: ["user3",],
-    available_Seats: 1,
+    rider_usernames: [],
+    jumpin_request: [],
+    available_seats: 1,
     carbon_emissions: 250,
     distance: 200,
     price: 5000,
@@ -168,16 +208,29 @@ export const devRideData = [
     driver_rating: 4,
     rider_rating: 4,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+    {
+      "rider": "user4",
+      "driver": "user2",
+      "messages": [
+        {
+          "from": "user4",
+          "text": "user4 would like to jumpIn",
+          "timeStamp": "2024-05-06T12:51:00.152Z"
+        },
+      ]
+    },
+  ],
   },
   {
     to: "Manchester",
     from: "London",
-    to_region: "Manchester",
-    from_region: "London",
+    to_region: "North West",
+    from_region: "South",
     driver_username: "user3",
     rider_usernames: ["user4",],
-    available_Seats: 1,
+    jumpin_request: ["user1","user2",],
+    available_seats: 3,
     carbon_emissions: 360,
     distance: 400,
     price: 4000,
@@ -209,16 +262,51 @@ export const devRideData = [
     driver_rating: 5,
     rider_rating: 4,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+      {
+        "rider": "user4",
+        "driver": "user3",
+        "messages": [
+          {
+            "from": "user3",
+            "text": "Request from user4 accepted",
+            "timeStamp": "2024-05-06T13:37:10.395Z"
+          }
+        ]
+      },
+      {
+        "rider": "user1",
+        "driver": "user3",
+        "messages": [
+          {
+            "from": "user1",
+            "text": "user1 would like to jumpIn",
+            "timeStamp": "2024-05-06T12:51:00.152Z"
+          },
+        ]
+      },
+      {
+        "rider": "user2",
+        "driver": "user3",
+        "messages": [
+          {
+            "from": "user2",
+            "text": "user2 would like to jumpIn",
+            "timeStamp": "2024-05-06T12:51:00.152Z"
+          },
+        ]
+      },
+    ]
   },
   {
     to: "Manchester",
     from: "Edinburgh",
-    to_region: "Manchester",
-    from_region: "Edinburgh",
+    to_region: "North West",
+    from_region: "Scotland",
     driver_username: "user4",
     rider_usernames: ["user1",],
-    available_Seats: 1,
+    jumpin_request: [],
+    available_seats: 1,
     carbon_emissions: 400,
     distance: 200,
     price: 2000,
@@ -250,7 +338,19 @@ export const devRideData = [
     driver_rating: 3,
     rider_rating: 4,
     date_and_time: Date.now(),
-    chats: []
+    chats: [
+      {
+        "rider": "user1",
+        "driver": "user4",
+        "messages": [
+          {
+            "from": "user4",
+            "text": "Request from user1 accepted",
+            "timeStamp": "2024-05-06T13:37:10.395Z"
+          }
+        ]
+      }
+    ]
   }   
 ]
 
